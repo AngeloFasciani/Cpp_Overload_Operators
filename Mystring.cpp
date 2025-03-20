@@ -33,19 +33,20 @@ Mystring::Mystring(const Mystring &source)
 
 // Destructor
 Mystring::~Mystring(){
-    delete str;
+    delete [] str;
 }
 
 // Methods
-void display(){
+void Mystring::display() const {
 
-    std::cout << str << endl;
+    std::cout << str << ":" << get_len() << std::endl;
 }
 
-int get_len(){
-
-    return 
+int Mystring::get_len() const{
+    return std::strlen(str);
 }
 
 
-char* 
+const char* Mystring::get_str() const{
+    return str;
+}
