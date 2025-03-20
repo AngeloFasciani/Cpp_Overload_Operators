@@ -1,4 +1,5 @@
-#include "Mystring.cpp"
+#ifndef _MYSTRING_H_
+#define _MYSTRING_H_    
 
 
 class Mystring
@@ -10,7 +11,12 @@ class Mystring
         Mystring(const char* s);
         Mystring(const Mystring &source);
         ~Mystring();
-        int get_len()
+        void display() const;
+        int get_len() const;
+        const char *get_str() const;
 
     
 };
+
+
+#endif
